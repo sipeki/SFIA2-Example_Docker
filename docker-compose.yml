@@ -1,19 +1,40 @@
-version: "3.7"
+    version: "3.7"
 
-services:
+    services:
     
-    Service_1:
-        build: ./Service_1
-        image: sipeki/service_1
+        Service_1:
+            build: ./Service_1
+            image: sipeki/service_1
+            container_name: service_1
+            ports:
+                - "5000:5000"
+            networks:
+                - sfia2_network
     
-    Service_2:
-        build: ./Service_2
-        image: sipeki/service_2
+        Service_2:
+            build: ./Service_2
+            image: sipeki/service_2
+            container_name: service_2
+            networks:
+                - sfia2_network
 
-    Service_3:
-        build: ./Service_3
-        image: sipeki/service_3
-    
-    Service_4:
-        build: ./Service_4
-        image: sipeki/service_4
+        Service_3:
+            build: ./Service_3
+            image: sipeki/service_3
+            container_name: Service_3
+            networks:
+                - sfia2_network
+
+        Service_4:
+            build: ./Service_4
+            image: sipeki/service_4
+            container_name: service_4
+            networks:
+                - sfia2_network
+
+    networks:
+        sfia2_network:
+            driver: bridge
+            name: sfia2_network  
+        another_network:
+            driver: bridge
