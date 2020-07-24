@@ -10,6 +10,14 @@
                 - "5000:5000"
             networks:
                 - sfia2_network
+            
+            environment: 
+                - SAMPLE=HELLO
+                - SIPEKI=${MYSQL}
+            depends_on:
+                - Service_4
+                - Service_2
+                - Service_3
     
         Service_2:
             build: ./Service_2
