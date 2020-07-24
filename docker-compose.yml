@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+    
+    Service_1:
+        build: ./Service_1
+        image: sipeki/service_1
+    
+    Service_2:
+        build: ./Service_2
+        image: sipeki/service_2
+
+    Service_3:
+        build: ./Service_3
+        image: sipeki/service_3
+    
+    Service_4:
+        build: ./Service_4
+        image: sipeki/service_4
