@@ -16,6 +16,6 @@ if [[ "$(docker images -q sipeki/service_3:latest 2> /dev/null)" == "" ]]; then
 fi
 
 # Build service_4 iamge if does not exits localy
-if [[ "$(docker images -q sipeki/service_4:latest 2> /dev/null)" == " "]]; then
+if [[ "$(docker images -q sipeki/service_4:latest 2> /dev/null)" == "" ]]; then
     docker build -t sipeki/service_4 ./Service_4
 fi
